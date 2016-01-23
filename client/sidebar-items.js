@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Client","Client that provides access to a MongoDB MongoDB node, replica-set, or sharded-cluster."],["ClientPool","Pool that allows usage of clients out of a single pool from multiple threads."],["SslOptions","Optional SSL configuration for a `ClientPool`."],["Uri","Abstraction on top of MongoDB connection URI format."]]});

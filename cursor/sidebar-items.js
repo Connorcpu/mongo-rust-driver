@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Cursor","Provides access to a MongoDB cursor for a normal operation."],["TailingCursor","Cursor that will reconnect and resume tailing a collection at the right point if the connection fails."]]});
