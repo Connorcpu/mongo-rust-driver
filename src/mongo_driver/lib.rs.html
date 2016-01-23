@@ -193,6 +193,7 @@
 <span id="150">150</span>
 <span id="151">151</span>
 <span id="152">152</span>
+<span id="153">153</span>
 </pre><pre class='rust '>
 <span class='doccomment'>//! This driver is a thin wrapper around the production-ready [Mongo C driver](https://github.com/mongodb/mongo-c-driver).</span>
 <span class='doccomment'>//!</span>
@@ -245,8 +246,9 @@
 <span class='kw'>mod</span> <span class='ident'>bsonc</span>;
 <span class='kw'>mod</span> <span class='ident'>error</span>;
 
-<span class='kw'>pub</span> <span class='kw'>use</span> <span class='ident'>error</span>::{<span class='ident'>MongoError</span>,<span class='ident'>BsoncError</span>,<span class='ident'>InvalidParamsError</span>};
+<span class='kw'>pub</span> <span class='kw'>use</span> <span class='ident'>error</span>::{<span class='ident'>MongoError</span>,<span class='ident'>BsoncError</span>,<span class='ident'>MongoErrorDomain</span>,<span class='ident'>MongoErrorCode</span>,<span class='ident'>InvalidParamsError</span>};
 
+<span class='doccomment'>/// Result that&#39;s used in all functions that perform operations on the database.</span>
 <span class='kw'>pub</span> <span class='kw'>type</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> <span class='op'>=</span> <span class='ident'>result</span>::<span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>T</span>, <span class='ident'>MongoError</span><span class='op'>&gt;</span>;
 
 <span class='kw'>static</span> <span class='ident'>MONGOC_INIT</span>: <span class='ident'>Once</span> <span class='op'>=</span> <span class='ident'>ONCE_INIT</span>;

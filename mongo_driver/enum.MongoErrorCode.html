@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `MongoErrorCode` enum in crate `mongo_driver`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, MongoErrorCode">
+
+    <title>mongo_driver::MongoErrorCode - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>mongo_driver</a></p><script>window.sidebarCurrent = {name: 'MongoErrorCode', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>mongo_driver</a>::<wbr><a class='enum' href=''>MongoErrorCode</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-1221' class='srclink' href='../src/mongo_driver/error.rs.html#116-150' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum MongoErrorCode {
+    Blank,
+    StreamInvalidType,
+    StreamInvalidState,
+    StreamNameResolution,
+    StreamSocket,
+    StreamConnect,
+    StreamNotEstablished,
+    ClientNotReady,
+    ClientTooBig,
+    ClientTooSmall,
+    ClientGetnonce,
+    ClientAuthenticate,
+    ClientNoAcceptablePeer,
+    ClientInExhaust,
+    ProtocolInvalidReply,
+    ProtocolBadWireVersion,
+    CursorInvalidCursor,
+    QueryFailure,
+    BsonInvalid,
+    MatcherInvalid,
+    NamespaceInvalid,
+    NamespaceInvalidFilterType,
+    CommandInvalidArg,
+    CollectionInsertFailed,
+    CollectionUpdateFailed,
+    CollectionDeleteFailed,
+    CollectionDoesNotExist,
+    GridfsInvalidFilename,
+    ScramNotDone,
+    ScramProtocolError,
+    QueryCommandNotFound,
+    QueryNotTailable,
+    Unknown,
+}</pre><div class='docblock'><p>MongoDB error code.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.Blank'><code>Blank</code></td><td></td></tr><tr><td id='variant.StreamInvalidType'><code>StreamInvalidType</code></td><td></td></tr><tr><td id='variant.StreamInvalidState'><code>StreamInvalidState</code></td><td></td></tr><tr><td id='variant.StreamNameResolution'><code>StreamNameResolution</code></td><td></td></tr><tr><td id='variant.StreamSocket'><code>StreamSocket</code></td><td></td></tr><tr><td id='variant.StreamConnect'><code>StreamConnect</code></td><td></td></tr><tr><td id='variant.StreamNotEstablished'><code>StreamNotEstablished</code></td><td></td></tr><tr><td id='variant.ClientNotReady'><code>ClientNotReady</code></td><td></td></tr><tr><td id='variant.ClientTooBig'><code>ClientTooBig</code></td><td></td></tr><tr><td id='variant.ClientTooSmall'><code>ClientTooSmall</code></td><td></td></tr><tr><td id='variant.ClientGetnonce'><code>ClientGetnonce</code></td><td></td></tr><tr><td id='variant.ClientAuthenticate'><code>ClientAuthenticate</code></td><td></td></tr><tr><td id='variant.ClientNoAcceptablePeer'><code>ClientNoAcceptablePeer</code></td><td></td></tr><tr><td id='variant.ClientInExhaust'><code>ClientInExhaust</code></td><td></td></tr><tr><td id='variant.ProtocolInvalidReply'><code>ProtocolInvalidReply</code></td><td></td></tr><tr><td id='variant.ProtocolBadWireVersion'><code>ProtocolBadWireVersion</code></td><td></td></tr><tr><td id='variant.CursorInvalidCursor'><code>CursorInvalidCursor</code></td><td></td></tr><tr><td id='variant.QueryFailure'><code>QueryFailure</code></td><td></td></tr><tr><td id='variant.BsonInvalid'><code>BsonInvalid</code></td><td></td></tr><tr><td id='variant.MatcherInvalid'><code>MatcherInvalid</code></td><td></td></tr><tr><td id='variant.NamespaceInvalid'><code>NamespaceInvalid</code></td><td></td></tr><tr><td id='variant.NamespaceInvalidFilterType'><code>NamespaceInvalidFilterType</code></td><td></td></tr><tr><td id='variant.CommandInvalidArg'><code>CommandInvalidArg</code></td><td></td></tr><tr><td id='variant.CollectionInsertFailed'><code>CollectionInsertFailed</code></td><td></td></tr><tr><td id='variant.CollectionUpdateFailed'><code>CollectionUpdateFailed</code></td><td></td></tr><tr><td id='variant.CollectionDeleteFailed'><code>CollectionDeleteFailed</code></td><td></td></tr><tr><td id='variant.CollectionDoesNotExist'><code>CollectionDoesNotExist</code></td><td></td></tr><tr><td id='variant.GridfsInvalidFilename'><code>GridfsInvalidFilename</code></td><td></td></tr><tr><td id='variant.ScramNotDone'><code>ScramNotDone</code></td><td></td></tr><tr><td id='variant.ScramProtocolError'><code>ScramProtocolError</code></td><td></td></tr><tr><td id='variant.QueryCommandNotFound'><code>QueryCommandNotFound</code></td><td></td></tr><tr><td id='variant.QueryNotTailable'><code>QueryNotTailable</code></td><td></td></tr><tr><td id='variant.Unknown'><code>Unknown</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../mongo_driver/enum.MongoErrorCode.html' title='mongo_driver::MongoErrorCode'>MongoErrorCode</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../mongo_driver/enum.MongoErrorCode.html' title='mongo_driver::MongoErrorCode'>MongoErrorCode</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../mongo_driver/enum.MongoErrorCode.html' title='mongo_driver::MongoErrorCode'>MongoErrorCode</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../mongo_driver/enum.MongoErrorCode.html' title='mongo_driver::MongoErrorCode'>MongoErrorCode</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "mongo_driver";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

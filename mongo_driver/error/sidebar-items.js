@@ -1,1 +1,1 @@
-initSidebarItems({"enum":[["MongoError",""]],"struct":[["BsoncError",""],["InvalidParamsError",""]]});
+initSidebarItems({"enum":[["MongoError","Wrapper for all errors that can occur in the driver."],["MongoErrorCode","MongoDB error code."],["MongoErrorDomain","MongoDB error domain."]],"struct":[["BsoncError","Error in the underlying C driver."],["InvalidParamsError","Invalid params error that can be reported by the underlying C driver."]]});

@@ -354,6 +354,21 @@
 <span id="311">311</span>
 <span id="312">312</span>
 <span id="313">313</span>
+<span id="314">314</span>
+<span id="315">315</span>
+<span id="316">316</span>
+<span id="317">317</span>
+<span id="318">318</span>
+<span id="319">319</span>
+<span id="320">320</span>
+<span id="321">321</span>
+<span id="322">322</span>
+<span id="323">323</span>
+<span id="324">324</span>
+<span id="325">325</span>
+<span id="326">326</span>
+<span id="327">327</span>
+<span id="328">328</span>
 </pre><pre class='rust '>
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>error</span>;
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>fmt</span>;
@@ -364,11 +379,17 @@
 
 <span class='kw'>use</span> <span class='ident'>mongoc</span>::<span class='ident'>bindings</span>;
 
+<span class='doccomment'>/// Wrapper for all errors that can occur in the driver.</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>MongoError</span> {
+    <span class='doccomment'>/// Error in the underlying C driver.</span>
     <span class='ident'>Bsonc</span>(<span class='ident'>BsoncError</span>),
+    <span class='doccomment'>/// Error decoding Bson.</span>
     <span class='ident'>Decoder</span>(<span class='ident'>DecoderError</span>),
+    <span class='doccomment'>/// Error encoding Bson.</span>
     <span class='ident'>Encoder</span>(<span class='ident'>EncoderError</span>),
+    <span class='doccomment'>/// Error accessing a value on a Bson document.</span>
     <span class='ident'>ValueAccessError</span>(<span class='ident'>ValueAccessError</span>),
+    <span class='doccomment'>/// Invalid params error that can be reported by the underlying C driver.</span>
     <span class='ident'>InvalidParams</span>(<span class='ident'>InvalidParamsError</span>)
 }
 
@@ -436,10 +457,12 @@
     }
 }
 
+<span class='doccomment'>/// Error in the underlying C driver.</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>BsoncError</span> {
     <span class='ident'>inner</span>: <span class='ident'>bindings</span>::<span class='ident'>bson_error_t</span>,
 }
 
+<span class='doccomment'>/// MongoDB error domain.</span>
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>,<span class='ident'>PartialEq</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>MongoErrorDomain</span> {
     <span class='ident'>Blank</span>,
@@ -460,6 +483,7 @@
     <span class='ident'>Unknown</span>
 }
 
+<span class='doccomment'>/// MongoDB error code.</span>
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>,<span class='ident'>PartialEq</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>MongoErrorCode</span> {
     <span class='ident'>Blank</span>,
@@ -508,10 +532,12 @@
         }
     }
 
+    <span class='doccomment'>/// Wether the error has content.</span>
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>is_empty</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>bool</span> {
         <span class='self'>self</span>.<span class='ident'>inner</span>.<span class='ident'>domain</span> <span class='op'>==</span> <span class='number'>0</span> <span class='op'>&amp;&amp;</span> <span class='self'>self</span>.<span class='ident'>inner</span>.<span class='ident'>code</span> <span class='op'>==</span> <span class='number'>0</span>
     }
 
+    <span class='doccomment'>/// The error&#39;s domain.</span>
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>domain</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>MongoErrorDomain</span> {
         <span class='kw'>match</span> <span class='self'>self</span>.<span class='ident'>inner</span>.<span class='ident'>domain</span> {
             <span class='number'>0</span>                                 <span class='op'>=&gt;</span> <span class='ident'>MongoErrorDomain</span>::<span class='ident'>Blank</span>,
@@ -533,6 +559,7 @@
         }
     }
 
+    <span class='doccomment'>/// The error&#39;s code.</span>
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>code</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>MongoErrorCode</span> {
         <span class='kw'>match</span> <span class='self'>self</span>.<span class='ident'>inner</span>.<span class='ident'>code</span> {
             <span class='number'>0</span>                                                    <span class='op'>=&gt;</span> <span class='ident'>MongoErrorCode</span>::<span class='ident'>Blank</span>,
@@ -571,11 +598,13 @@
         }
     }
 
+    <span class='doccomment'>/// The error&#39;s message.</span>
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>get_message</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>Cow</span><span class='op'>&lt;</span><span class='ident'>str</span><span class='op'>&gt;</span> {
         <span class='kw'>let</span> <span class='ident'>cstr</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='ident'>CStr</span>::<span class='ident'>from_ptr</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>.<span class='ident'>inner</span>.<span class='ident'>message</span> <span class='kw'>as</span> <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>i8</span>) };
         <span class='ident'>String</span>::<span class='ident'>from_utf8_lossy</span>(<span class='ident'>cstr</span>.<span class='ident'>to_bytes</span>())
     }
 
+    <span class='attribute'>#[<span class='ident'>doc</span>(<span class='ident'>hidden</span>)]</span>
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>mut_inner</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>bindings</span>::<span class='ident'>bson_error_t</span> {
         <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>.<span class='ident'>inner</span>
     }
@@ -611,6 +640,7 @@
     }
 }
 
+<span class='doccomment'>/// Invalid params error that can be reported by the underlying C driver.</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>InvalidParamsError</span>;
 
 <span class='kw'>impl</span> <span class='ident'>fmt</span>::<span class='ident'>Debug</span> <span class='kw'>for</span> <span class='ident'>InvalidParamsError</span> {

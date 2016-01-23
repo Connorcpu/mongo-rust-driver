@@ -46,7 +46,7 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-0' class='srclink' href='../src/mongo_driver/lib.rs.html#1-152' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-0' class='srclink' href='../src/mongo_driver/lib.rs.html#1-153' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>This driver is a thin wrapper around the production-ready <a href="https://github.com/mongodb/mongo-c-driver">Mongo C driver</a>.</p>
 
 <p>It aims to provide a safe and ergonomic Rust interface which handles all the gnarly usage details of
@@ -137,7 +137,8 @@ this.</p>
                         <td><a class='struct' href='struct.BsoncError.html'
                                title='mongo_driver::BsoncError'>BsoncError</a></td>
                         <td class='docblock short'>
-                             
+                             <p>Error in the underlying C driver.</p>
+
                         </td>
                     </tr>
                 
@@ -154,7 +155,8 @@ this.</p>
                         <td><a class='struct' href='struct.InvalidParamsError.html'
                                title='mongo_driver::InvalidParamsError'>InvalidParamsError</a></td>
                         <td class='docblock short'>
-                             
+                             <p>Invalid params error that can be reported by the underlying C driver.</p>
+
                         </td>
                     </tr>
                 </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
@@ -163,7 +165,26 @@ this.</p>
                         <td><a class='enum' href='enum.MongoError.html'
                                title='mongo_driver::MongoError'>MongoError</a></td>
                         <td class='docblock short'>
-                             
+                             <p>Wrapper for all errors that can occur in the driver.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='enum' href='enum.MongoErrorCode.html'
+                               title='mongo_driver::MongoErrorCode'>MongoErrorCode</a></td>
+                        <td class='docblock short'>
+                             <p>MongoDB error code.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='enum' href='enum.MongoErrorDomain.html'
+                               title='mongo_driver::MongoErrorDomain'>MongoErrorDomain</a></td>
+                        <td class='docblock short'>
+                             <p>MongoDB error domain.</p>
+
                         </td>
                     </tr>
                 </table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
@@ -172,7 +193,8 @@ this.</p>
                         <td><a class='type' href='type.Result.html'
                                title='mongo_driver::Result'>Result</a></td>
                         <td class='docblock short'>
-                             
+                             <p>Result that&#39;s used in all functions that perform operations on the database.</p>
+
                         </td>
                     </tr>
                 </table></section>
