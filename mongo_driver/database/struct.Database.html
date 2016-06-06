@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,32 +44,35 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>mongo_driver</a>::<wbr><a href='index.html'>database</a>::<wbr><a class='struct' href=''>Database</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-684' class='srclink' href='../../src/mongo_driver/database.rs.html#31-34' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-705' class='srclink' href='../../src/mongo_driver/src/database.rs.html#31-34' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct Database&lt;'a&gt; {
     // some fields omitted
 }</pre><div class='docblock'><p>Provides access to a MongoDB database.</p>
 
 <p>A database instance can be created by calling <code>get_database</code> or <code>take_database</code> on a <code>Client</code> instance.</p>
-</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl&lt;'a&gt; <a class='struct' href='../../mongo_driver/database/struct.Database.html' title='mongo_driver::database::Database'>Database</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(created_by: CreatedBy&lt;'a&gt;, inner: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut mongoc_database_t</a>) -&gt; <a class='struct' href='../../mongo_driver/database/struct.Database.html' title='mongo_driver::database::Database'>Database</a>&lt;'a&gt;</code></h4>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='struct' href='../../mongo_driver/database/struct.Database.html' title='mongo_driver::database::Database'>Database</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-709' class='srclink' href='../../src/mongo_driver/src/database.rs.html#36-192' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(created_by: CreatedBy&lt;'a&gt;, inner: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a>mongoc_database_t) -&gt; <a class='struct' href='../../mongo_driver/database/struct.Database.html' title='mongo_driver::database::Database'>Database</a>&lt;'a&gt;</code></h4>
 <h4 id='method.command' class='method'><code>fn <a href='#method.command' class='fnname'>command</a>(&amp;'a self, command: Document, options: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../mongo_driver/struct.CommandAndFindOptions.html' title='mongo_driver::CommandAndFindOptions'>CommandAndFindOptions</a>&gt;) -&gt; <a class='type' href='../../mongo_driver/type.Result.html' title='mongo_driver::Result'>Result</a>&lt;<a class='struct' href='../../mongo_driver/cursor/struct.Cursor.html' title='mongo_driver::cursor::Cursor'>Cursor</a>&lt;'a&gt;&gt;</code></h4>
 <div class='docblock'><p>Execute a command on the database.
 This is performed lazily and therefore requires calling <code>next</code> on the resulting cursor.</p>
 </div><h4 id='method.command_simple' class='method'><code>fn <a href='#method.command_simple' class='fnname'>command_simple</a>(&amp;'a self, command: Document, read_prefs: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../mongo_driver/read_prefs/struct.ReadPrefs.html' title='mongo_driver::read_prefs::ReadPrefs'>ReadPrefs</a>&gt;) -&gt; <a class='type' href='../../mongo_driver/type.Result.html' title='mongo_driver::Result'>Result</a>&lt;Document&gt;</code></h4>
 <div class='docblock'><p>Simplified version of <code>command</code> that returns the first document immediately.</p>
-</div><h4 id='method.create_collection' class='method'><code>fn <a href='#method.create_collection' class='fnname'>create_collection</a>&lt;S: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;&gt;(&amp;self, name: S, options: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;Document&gt;) -&gt; <a class='type' href='../../mongo_driver/type.Result.html' title='mongo_driver::Result'>Result</a>&lt;<a class='struct' href='../../mongo_driver/collection/struct.Collection.html' title='mongo_driver::collection::Collection'>Collection</a>&gt;</code></h4>
+</div><h4 id='method.create_collection' class='method'><code>fn <a href='#method.create_collection' class='fnname'>create_collection</a>&lt;S:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;&gt;(&amp;self, name: S, options: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;Document&gt;) -&gt; <a class='type' href='../../mongo_driver/type.Result.html' title='mongo_driver::Result'>Result</a>&lt;<a class='struct' href='../../mongo_driver/collection/struct.Collection.html' title='mongo_driver::collection::Collection'>Collection</a>&gt;</code></h4>
 <div class='docblock'><p>Create a new collection in this database.</p>
-</div><h4 id='method.get_collection' class='method'><code>fn <a href='#method.get_collection' class='fnname'>get_collection</a>&lt;S: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;&gt;(&amp;self, collection: S) -&gt; <a class='struct' href='../../mongo_driver/collection/struct.Collection.html' title='mongo_driver::collection::Collection'>Collection</a></code></h4>
+</div><h4 id='method.get_collection' class='method'><code>fn <a href='#method.get_collection' class='fnname'>get_collection</a>&lt;S:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;&gt;(&amp;self, collection: S) -&gt; <a class='struct' href='../../mongo_driver/collection/struct.Collection.html' title='mongo_driver::collection::Collection'>Collection</a></code></h4>
 <div class='docblock'><p>Borrow a collection</p>
-</div><h4 id='method.take_collection' class='method'><code>fn <a href='#method.take_collection' class='fnname'>take_collection</a>&lt;S: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;&gt;(self, collection: S) -&gt; <a class='struct' href='../../mongo_driver/collection/struct.Collection.html' title='mongo_driver::collection::Collection'>Collection</a>&lt;'a&gt;</code></h4>
+</div><h4 id='method.take_collection' class='method'><code>fn <a href='#method.take_collection' class='fnname'>take_collection</a>&lt;S:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;&gt;(self, collection: S) -&gt; <a class='struct' href='../../mongo_driver/collection/struct.Collection.html' title='mongo_driver::collection::Collection'>Collection</a>&lt;'a&gt;</code></h4>
 <div class='docblock'><p>Take a collection, database is owned by the collection so the collection can easily
 be passed around</p>
 </div><h4 id='method.get_name' class='method'><code>fn <a href='#method.get_name' class='fnname'>get_name</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/collections/borrow/enum.Cow.html' title='collections::borrow::Cow'>Cow</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;</code></h4>
 <div class='docblock'><p>Get the name of this database.</p>
-</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../mongo_driver/database/struct.Database.html' title='mongo_driver::database::Database'>Database</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.drop' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#method.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
-</div></section>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../mongo_driver/database/struct.Database.html' title='mongo_driver::database::Database'>Database</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-779' class='srclink' href='../../src/mongo_driver/src/database.rs.html#194-201' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.drop' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>A method called when the value goes out of scope. <a href="https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -91,6 +95,8 @@ be passed around</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -111,7 +117,7 @@ be passed around</p>
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

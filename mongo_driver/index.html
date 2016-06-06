@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../main.css">
+    
 
     
     
@@ -43,10 +44,10 @@
 
     <section id='main' class="content mod">
 <h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>mongo_driver</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-0' class='srclink' href='../src/mongo_driver/lib.rs.html#1-153' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/mongo_driver/src/lib.rs.html#1-153' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>This driver is a thin wrapper around the production-ready <a href="https://github.com/mongodb/mongo-c-driver">Mongo C driver</a>.</p>
 
 <p>It aims to provide a safe and ergonomic Rust interface which handles all the gnarly usage details of
@@ -56,7 +57,8 @@ underlying C driver in the recommended way specified in it&#39;s <a href="http:/
 <p>To get started create a client pool wrapped in an <code>Arc</code> so we can share it between threads. Then pop a client from it
 you can use to perform operations.</p>
 
-<h1 id='example' class='section-header'><a href='#example'>Example</a></h1><pre class='rust rust-example-rendered'>
+<h1 id='example' class='section-header'><a href='#example'>Example</a></h1>
+<pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>sync</span>::<span class='ident'>Arc</span>;
 <span class='kw'>use</span> <span class='ident'>mongo_driver</span>::<span class='ident'>client</span>::{<span class='ident'>ClientPool</span>,<span class='ident'>Uri</span>};
 
@@ -69,135 +71,107 @@ you can use to perform operations.</p>
 this.</p>
 </div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='client/index.html'
-                               title='mongo_driver::client'>client</a></td>
-                        <td class='docblock short'>
-                             <p>Client to access a MongoDB node, replica set or sharded cluster.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='collection/index.html'
-                               title='mongo_driver::collection'>collection</a></td>
-                        <td class='docblock short'>
-                             <p>Access to a MongoDB collection.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='cursor/index.html'
-                               title='mongo_driver::cursor'>cursor</a></td>
-                        <td class='docblock short'>
-                             <p>Access to a MongoDB query cursor.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='database/index.html'
-                               title='mongo_driver::database'>database</a></td>
-                        <td class='docblock short'>
-                             <p>Access to a MongoDB database.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='flags/index.html'
-                               title='mongo_driver::flags'>flags</a></td>
-                        <td class='docblock short'>
-                             <p>Flags to configure various MongoDB operations.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='read_prefs/index.html'
-                               title='mongo_driver::read_prefs'>read_prefs</a></td>
-                        <td class='docblock short'>
-                             <p>Abstraction on top of the MongoDB connection read prefences.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='write_concern/index.html'
-                               title='mongo_driver::write_concern'>write_concern</a></td>
-                        <td class='docblock short'>
-                             <p>Abstraction on top of the MongoDB connection write concern.</p>
-
-                        </td>
-                    </tr>
-                </table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='client/index.html'
+                                  title='mongo_driver::client'>client</a></td>
+                           <td class='docblock short'>
+                                <p>Client to access a MongoDB node, replica set or sharded cluster.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='collection/index.html'
+                                  title='mongo_driver::collection'>collection</a></td>
+                           <td class='docblock short'>
+                                <p>Access to a MongoDB collection.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='cursor/index.html'
+                                  title='mongo_driver::cursor'>cursor</a></td>
+                           <td class='docblock short'>
+                                <p>Access to a MongoDB query cursor.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='database/index.html'
+                                  title='mongo_driver::database'>database</a></td>
+                           <td class='docblock short'>
+                                <p>Access to a MongoDB database.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='flags/index.html'
+                                  title='mongo_driver::flags'>flags</a></td>
+                           <td class='docblock short'>
+                                <p>Flags to configure various MongoDB operations.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='read_prefs/index.html'
+                                  title='mongo_driver::read_prefs'>read_prefs</a></td>
+                           <td class='docblock short'>
+                                <p>Abstraction on top of the MongoDB connection read prefences.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='write_concern/index.html'
+                                  title='mongo_driver::write_concern'>write_concern</a></td>
+                           <td class='docblock short'>
+                                <p>Abstraction on top of the MongoDB connection write concern.</p>
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.BsoncError.html'
-                               title='mongo_driver::BsoncError'>BsoncError</a></td>
-                        <td class='docblock short'>
-                             <p>Error in the underlying C driver.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.CommandAndFindOptions.html'
-                               title='mongo_driver::CommandAndFindOptions'>CommandAndFindOptions</a></td>
-                        <td class='docblock short'>
-                             <p>Options to configure both command and find operations.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.InvalidParamsError.html'
-                               title='mongo_driver::InvalidParamsError'>InvalidParamsError</a></td>
-                        <td class='docblock short'>
-                             <p>Invalid params error that can be reported by the underlying C driver.</p>
-
-                        </td>
-                    </tr>
-                </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.BsoncError.html'
+                                  title='mongo_driver::BsoncError'>BsoncError</a></td>
+                           <td class='docblock short'>
+                                <p>Error in the underlying C driver.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CommandAndFindOptions.html'
+                                  title='mongo_driver::CommandAndFindOptions'>CommandAndFindOptions</a></td>
+                           <td class='docblock short'>
+                                <p>Options to configure both command and find operations.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.InvalidParamsError.html'
+                                  title='mongo_driver::InvalidParamsError'>InvalidParamsError</a></td>
+                           <td class='docblock short'>
+                                <p>Invalid params error that can be reported by the underlying C driver.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='enum' href='enum.MongoError.html'
-                               title='mongo_driver::MongoError'>MongoError</a></td>
-                        <td class='docblock short'>
-                             <p>Wrapper for all errors that can occur in the driver.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='enum' href='enum.MongoErrorCode.html'
-                               title='mongo_driver::MongoErrorCode'>MongoErrorCode</a></td>
-                        <td class='docblock short'>
-                             <p>MongoDB error code.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='enum' href='enum.MongoErrorDomain.html'
-                               title='mongo_driver::MongoErrorDomain'>MongoErrorDomain</a></td>
-                        <td class='docblock short'>
-                             <p>MongoDB error domain.</p>
-
-                        </td>
-                    </tr>
-                </table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.MongoError.html'
+                                  title='mongo_driver::MongoError'>MongoError</a></td>
+                           <td class='docblock short'>
+                                <p>Wrapper for all errors that can occur in the driver.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.MongoErrorCode.html'
+                                  title='mongo_driver::MongoErrorCode'>MongoErrorCode</a></td>
+                           <td class='docblock short'>
+                                <p>MongoDB error code.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.MongoErrorDomain.html'
+                                  title='mongo_driver::MongoErrorDomain'>MongoErrorDomain</a></td>
+                           <td class='docblock short'>
+                                <p>MongoDB error domain.</p>
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='type' href='type.Result.html'
-                               title='mongo_driver::Result'>Result</a></td>
-                        <td class='docblock short'>
-                             <p>Result that&#39;s used in all functions that perform operations on the database.</p>
-
-                        </td>
-                    </tr>
-                </table></section>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Result.html'
+                                  title='mongo_driver::Result'>Result</a></td>
+                           <td class='docblock short'>
+                                <p>Result that&#39;s used in all functions that perform operations on the database.</p>
+                           </td>
+                       </tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -220,6 +194,8 @@ this.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -240,7 +216,7 @@ this.</p>
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

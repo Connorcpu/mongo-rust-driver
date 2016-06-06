@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../main.css">
+    
 
     
     
@@ -43,10 +44,10 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>mongo_driver</a>::<wbr><a class='struct' href=''>CommandAndFindOptions</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-1399' class='srclink' href='../src/mongo_driver/lib.rs.html#99-112' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1321' class='srclink' href='../src/mongo_driver/src/lib.rs.html#99-112' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct CommandAndFindOptions {
     pub query_flags: <a class='struct' href='../mongo_driver/flags/struct.Flags.html' title='mongo_driver::flags::Flags'>Flags</a>&lt;<a class='enum' href='../mongo_driver/flags/enum.QueryFlag.html' title='mongo_driver::flags::QueryFlag'>QueryFlag</a>&gt;,
     pub skip: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
@@ -55,20 +56,20 @@
     pub fields: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Document&gt;,
     pub read_prefs: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../mongo_driver/read_prefs/struct.ReadPrefs.html' title='mongo_driver::read_prefs::ReadPrefs'>ReadPrefs</a>&gt;,
 }</pre><div class='docblock'><p>Options to configure both command and find operations.</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.query_flags'><code>query_flags</code></td><td><div class='docblock'><p>Flags to use</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.skip'><code>skip</code></td><td><div class='docblock'><p>Number of documents to skip, zero to ignore</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.limit'><code>limit</code></td><td><div class='docblock'><p>Max number of documents to return, zero to ignore</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.batch_size'><code>batch_size</code></td><td><div class='docblock'><p>Number of documents in each batch, zero to ignore (default is 100)</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.fields'><code>fields</code></td><td><div class='docblock'><p>Fields to return, not all commands support this option</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.read_prefs'><code>read_prefs</code></td><td><div class='docblock'><p>Read prefs to use</p>
-</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../mongo_driver/struct.CommandAndFindOptions.html' title='mongo_driver::CommandAndFindOptions'>CommandAndFindOptions</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../mongo_driver/struct.CommandAndFindOptions.html' title='mongo_driver::CommandAndFindOptions'>CommandAndFindOptions</a></code></h4>
+</div><h2 class='fields'>Fields</h2><span id='structfield.query_flags'><code>query_flags: <a class='struct' href='../mongo_driver/flags/struct.Flags.html' title='mongo_driver::flags::Flags'>Flags</a>&lt;<a class='enum' href='../mongo_driver/flags/enum.QueryFlag.html' title='mongo_driver::flags::QueryFlag'>QueryFlag</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>Flags to use</p>
+</div><span id='structfield.skip'><code>skip: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p>Number of documents to skip, zero to ignore</p>
+</div><span id='structfield.limit'><code>limit: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p>Max number of documents to return, zero to ignore</p>
+</div><span id='structfield.batch_size'><code>batch_size: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p>Number of documents in each batch, zero to ignore (default is 100)</p>
+</div><span id='structfield.fields'><code>fields: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Document&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>Fields to return, not all commands support this option</p>
+</div><span id='structfield.read_prefs'><code>read_prefs: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../mongo_driver/read_prefs/struct.ReadPrefs.html' title='mongo_driver::read_prefs::ReadPrefs'>ReadPrefs</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>Read prefs to use</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../mongo_driver/struct.CommandAndFindOptions.html' title='mongo_driver::CommandAndFindOptions'>CommandAndFindOptions</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1328' class='srclink' href='../src/mongo_driver/src/lib.rs.html#114-144' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../mongo_driver/struct.CommandAndFindOptions.html' title='mongo_driver::CommandAndFindOptions'>CommandAndFindOptions</a></code></h4>
 <div class='docblock'><p>Default options used if none are provided.</p>
 </div><h4 id='method.with_fields' class='method'><code>fn <a href='#method.with_fields' class='fnname'>with_fields</a>(fields: Document) -&gt; <a class='struct' href='../mongo_driver/struct.CommandAndFindOptions.html' title='mongo_driver::CommandAndFindOptions'>CommandAndFindOptions</a></code></h4>
 </div></section>
@@ -94,6 +95,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -114,7 +117,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

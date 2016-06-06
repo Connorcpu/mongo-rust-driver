@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,22 +44,25 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>mongo_driver</a>::<wbr><a href='index.html'>read_prefs</a>::<wbr><a class='struct' href=''>ReadPrefs</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-995' class='srclink' href='../../src/mongo_driver/read_prefs.rs.html#33-35' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-926' class='srclink' href='../../src/mongo_driver/src/read_prefs.rs.html#33-35' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct ReadPrefs {
     // some fields omitted
 }</pre><div class='docblock'><p>Provides an abstraction on top of the MongoDB connection read prefences.</p>
 
 <p>It allows for hinting to the driver which nodes in a replica set should be accessed first.
 Generally, it makes the most sense to stick with the global default, <code>Primary</code>. All of the other modes come with caveats that won&#39;t be covered in great detail here.</p>
-</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../mongo_driver/read_prefs/struct.ReadPrefs.html' title='mongo_driver::read_prefs::ReadPrefs'>ReadPrefs</a></code></h3><div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(read_mode: &amp;<a class='enum' href='../../mongo_driver/read_prefs/enum.ReadMode.html' title='mongo_driver::read_prefs::ReadMode'>ReadMode</a>) -&gt; <a class='struct' href='../../mongo_driver/read_prefs/struct.ReadPrefs.html' title='mongo_driver::read_prefs::ReadPrefs'>ReadPrefs</a></code></h4>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../mongo_driver/read_prefs/struct.ReadPrefs.html' title='mongo_driver::read_prefs::ReadPrefs'>ReadPrefs</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-928' class='srclink' href='../../src/mongo_driver/src/read_prefs.rs.html#37-62' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(read_mode: &amp;<a class='enum' href='../../mongo_driver/read_prefs/enum.ReadMode.html' title='mongo_driver::read_prefs::ReadMode'>ReadMode</a>) -&gt; <a class='struct' href='../../mongo_driver/read_prefs/struct.ReadPrefs.html' title='mongo_driver::read_prefs::ReadPrefs'>ReadPrefs</a></code></h4>
 <div class='docblock'><p>Create a new empty read prefs.</p>
 </div><h4 id='method.default' class='method'><code>fn <a href='#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../mongo_driver/read_prefs/struct.ReadPrefs.html' title='mongo_driver::read_prefs::ReadPrefs'>ReadPrefs</a></code></h4>
 <div class='docblock'><p>Get a new instance of the default read pref.</p>
-</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../mongo_driver/read_prefs/struct.ReadPrefs.html' title='mongo_driver::read_prefs::ReadPrefs'>ReadPrefs</a></code></h3><div class='impl-items'><h4 id='method.drop' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#method.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
-</div></section>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../mongo_driver/read_prefs/struct.ReadPrefs.html' title='mongo_driver::read_prefs::ReadPrefs'>ReadPrefs</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-941' class='srclink' href='../../src/mongo_driver/src/read_prefs.rs.html#64-71' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.drop' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>A method called when the value goes out of scope. <a href="https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -81,6 +85,8 @@ Generally, it makes the most sense to stick with the global default, <code>Prima
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -101,7 +107,7 @@ Generally, it makes the most sense to stick with the global default, <code>Prima
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

@@ -1,1 +1,0 @@
-initSidebarItems({"enum":[["ReadMode","Describes how reads should be dispatched."]],"struct":[["ReadPrefs","Provides an abstraction on top of the MongoDB connection read prefences."]]});

@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../main.css">
+    
 
     
     
@@ -43,10 +44,10 @@
 
     <section id='main' class="content enum">
 <h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>mongo_driver</a>::<wbr><a class='enum' href=''>MongoError</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-1098' class='srclink' href='../src/mongo_driver/error.rs.html#11-22' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1029' class='srclink' href='../src/mongo_driver/src/error.rs.html#11-22' title='goto source code'>[src]</a></span></h1>
 <pre class='rust enum'>pub enum MongoError {
     Bsonc(<a class='struct' href='../mongo_driver/struct.BsoncError.html' title='mongo_driver::BsoncError'>BsoncError</a>),
     Decoder(DecoderError),
@@ -55,21 +56,38 @@
     InvalidParams(<a class='struct' href='../mongo_driver/struct.InvalidParamsError.html' title='mongo_driver::InvalidParamsError'>InvalidParamsError</a>),
 }</pre><div class='docblock'><p>Wrapper for all errors that can occur in the driver.</p>
 </div><h2 class='variants'>Variants</h2>
-<table><tr><td id='variant.Bsonc'><code>Bsonc</code></td><td><div class='docblock'><p>Error in the underlying C driver.</p>
-</div></td></tr><tr><td id='variant.Decoder'><code>Decoder</code></td><td><div class='docblock'><p>Error decoding Bson.</p>
-</div></td></tr><tr><td id='variant.Encoder'><code>Encoder</code></td><td><div class='docblock'><p>Error encoding Bson.</p>
-</div></td></tr><tr><td id='variant.ValueAccessError'><code>ValueAccessError</code></td><td><div class='docblock'><p>Error accessing a value on a Bson document.</p>
-</div></td></tr><tr><td id='variant.InvalidParams'><code>InvalidParams</code></td><td><div class='docblock'><p>Invalid params error that can be reported by the underlying C driver.</p>
-</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html' title='core::fmt::Display'>Display</a> for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html#method.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h3><div class='impl-items'><h4 id='method.fmt-1' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html' title='std::error::Error'>Error</a> for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h3><div class='impl-items'><h4 id='method.description' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html#method.description' class='fnname'>description</a>(&amp;self) -&gt; &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></h4>
-<h4 id='method.cause' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html#method.cause' class='fnname'>cause</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='trait' href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html' title='std::error::Error'>Error</a>&gt;</code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;DecoderError&gt; for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h3><div class='impl-items'><h4 id='method.from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#method.from' class='fnname'>from</a>(error: DecoderError) -&gt; <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;EncoderError&gt; for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h3><div class='impl-items'><h4 id='method.from-1' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#method.from' class='fnname'>from</a>(error: EncoderError) -&gt; <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;ValueAccessError&gt; for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h3><div class='impl-items'><h4 id='method.from-2' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#method.from' class='fnname'>from</a>(error: ValueAccessError) -&gt; <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='struct' href='../mongo_driver/struct.BsoncError.html' title='mongo_driver::BsoncError'>BsoncError</a>&gt; for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h3><div class='impl-items'><h4 id='method.from-3' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#method.from' class='fnname'>from</a>(error: <a class='struct' href='../mongo_driver/struct.BsoncError.html' title='mongo_driver::BsoncError'>BsoncError</a>) -&gt; <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='struct' href='../mongo_driver/struct.InvalidParamsError.html' title='mongo_driver::InvalidParamsError'>InvalidParamsError</a>&gt; for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h3><div class='impl-items'><h4 id='method.from-4' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#method.from' class='fnname'>from</a>(error: <a class='struct' href='../mongo_driver/struct.InvalidParamsError.html' title='mongo_driver::InvalidParamsError'>InvalidParamsError</a>) -&gt; <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h4>
-</div></section>
+<span id='variant.Bsonc' class='variant'><code>Bsonc(<a class='struct' href='../mongo_driver/struct.BsoncError.html' title='mongo_driver::BsoncError'>BsoncError</a>)</code></span><div class='docblock'><p>Error in the underlying C driver.</p>
+</div><span id='variant.Decoder' class='variant'><code>Decoder(DecoderError)</code></span><div class='docblock'><p>Error decoding Bson.</p>
+</div><span id='variant.Encoder' class='variant'><code>Encoder(EncoderError)</code></span><div class='docblock'><p>Error encoding Bson.</p>
+</div><span id='variant.ValueAccessError' class='variant'><code>ValueAccessError(ValueAccessError)</code></span><div class='docblock'><p>Error accessing a value on a Bson document.</p>
+</div><span id='variant.InvalidParams' class='variant'><code>InvalidParams(<a class='struct' href='../mongo_driver/struct.InvalidParamsError.html' title='mongo_driver::InvalidParamsError'>InvalidParamsError</a>)</code></span><div class='docblock'><p>Invalid params error that can be reported by the underlying C driver.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html' title='core::fmt::Display'>Display</a> for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1040' class='srclink' href='../src/mongo_driver/src/error.rs.html#24-34' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1059' class='srclink' href='../src/mongo_driver/src/error.rs.html#36-46' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt-1' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html' title='std::error::Error'>Error</a> for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1078' class='srclink' href='../src/mongo_driver/src/error.rs.html#48-68' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.description' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html#tymethod.description' class='fnname'>description</a>(&amp;self) -&gt; &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></h4>
+<div class='docblock'><p>A short description of the error. <a href="https://doc.rust-lang.org/nightly/std/error/trait.Error.html#tymethod.description">Read more</a></p>
+</div><h4 id='method.cause' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html#method.cause' class='fnname'>cause</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='trait' href='https://doc.rust-lang.org/nightly/std/error/trait.Error.html' title='std::error::Error'>Error</a>&gt;</code></h4>
+<div class='docblock'><p>The lower-level cause of this error, if any.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;DecoderError&gt; for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1093' class='srclink' href='../src/mongo_driver/src/error.rs.html#70-74' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(error: DecoderError) -&gt; <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;EncoderError&gt; for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1096' class='srclink' href='../src/mongo_driver/src/error.rs.html#76-80' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-1' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(error: EncoderError) -&gt; <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;ValueAccessError&gt; for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1099' class='srclink' href='../src/mongo_driver/src/error.rs.html#82-86' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-2' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(error: ValueAccessError) -&gt; <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='struct' href='../mongo_driver/struct.BsoncError.html' title='mongo_driver::BsoncError'>BsoncError</a>&gt; for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1255' class='srclink' href='../src/mongo_driver/src/error.rs.html#265-269' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-3' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(error: <a class='struct' href='../mongo_driver/struct.BsoncError.html' title='mongo_driver::BsoncError'>BsoncError</a>) -&gt; <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='struct' href='../mongo_driver/struct.InvalidParamsError.html' title='mongo_driver::InvalidParamsError'>InvalidParamsError</a>&gt; for <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1273' class='srclink' href='../src/mongo_driver/src/error.rs.html#292-296' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from-4' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(error: <a class='struct' href='../mongo_driver/struct.InvalidParamsError.html' title='mongo_driver::InvalidParamsError'>InvalidParamsError</a>) -&gt; <a class='enum' href='../mongo_driver/enum.MongoError.html' title='mongo_driver::MongoError'>MongoError</a></code></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -92,6 +110,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -112,7 +132,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

@@ -1,1 +1,0 @@
-initSidebarItems({"enum":[["WriteConcernLevel","Possible write concern levels, only default is supported at the moment."]],"struct":[["WriteConcern","This tells the driver what level of acknowledgment to await from the server. The default, `Default`, is right for the great majority of applications."]]});

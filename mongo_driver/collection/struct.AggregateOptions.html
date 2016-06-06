@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="API documentation for the Rust `CountOptions` struct in crate `mongo_driver`.">
-    <meta name="keywords" content="rust, rustlang, rust-lang, CountOptions">
+    <meta name="description" content="API documentation for the Rust `AggregateOptions` struct in crate `mongo_driver`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, AggregateOptions">
 
-    <title>mongo_driver::collection::CountOptions - Rust</title>
+    <title>mongo_driver::collection::AggregateOptions - Rust</title>
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
@@ -28,7 +28,7 @@
 
     <nav class="sidebar">
         
-        <p class='location'><a href='../index.html'>mongo_driver</a>::<wbr><a href='index.html'>collection</a></p><script>window.sidebarCurrent = {name: 'CountOptions', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+        <p class='location'><a href='../index.html'>mongo_driver</a>::<wbr><a href='index.html'>collection</a></p><script>window.sidebarCurrent = {name: 'AggregateOptions', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
     </nav>
 
     <nav class="sub">
@@ -43,31 +43,26 @@
     </nav>
 
     <section id='main' class="content struct">
-<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>mongo_driver</a>::<wbr><a href='index.html'>collection</a>::<wbr><a class='struct' href=''>CountOptions</a></span><span class='out-of-band'><span id='render-detail'>
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>mongo_driver</a>::<wbr><a href='index.html'>collection</a>::<wbr><a class='struct' href=''>AggregateOptions</a></span><span class='out-of-band'><span id='render-detail'>
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-290' class='srclink' href='../../src/mongo_driver/src/collection.rs.html#124-135' title='goto source code'>[src]</a></span></h1>
-<pre class='rust struct'>pub struct CountOptions {
+               </span><a id='src-262' class='srclink' href='../../src/mongo_driver/src/collection.rs.html#45-52' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct AggregateOptions {
     pub query_flags: <a class='struct' href='../../mongo_driver/flags/struct.Flags.html' title='mongo_driver::flags::Flags'>Flags</a>&lt;<a class='enum' href='../../mongo_driver/flags/enum.QueryFlag.html' title='mongo_driver::flags::QueryFlag'>QueryFlag</a>&gt;,
-    pub skip: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
-    pub limit: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
-    pub opts: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Document&gt;,
+    pub options: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Document&gt;,
     pub read_prefs: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../mongo_driver/read_prefs/struct.ReadPrefs.html' title='mongo_driver::read_prefs::ReadPrefs'>ReadPrefs</a>&gt;,
-}</pre><div class='docblock'><p>Options to configure a count operation.</p>
+}</pre><div class='docblock'><p>Options to configure an aggregate operation.</p>
 </div><h2 class='fields'>Fields</h2><span id='structfield.query_flags'><code>query_flags: <a class='struct' href='../../mongo_driver/flags/struct.Flags.html' title='mongo_driver::flags::Flags'>Flags</a>&lt;<a class='enum' href='../../mongo_driver/flags/enum.QueryFlag.html' title='mongo_driver::flags::QueryFlag'>QueryFlag</a>&gt;</code></span>
-                           <span class='stab '></span><div class='docblock'><p>The query flags to use</p>
-</div><span id='structfield.skip'><code>skip: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></span>
-                           <span class='stab '></span><div class='docblock'><p>Number of results to skip, zero to ignore</p>
-</div><span id='structfield.limit'><code>limit: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></span>
-                           <span class='stab '></span><div class='docblock'><p>Limit to the number of results, zero to ignore</p>
-</div><span id='structfield.opts'><code>opts: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Document&gt;</code></span>
-                           <span class='stab '></span><div class='docblock'><p>Optional extra keys to add to the count</p>
+                           <span class='stab '></span><div class='docblock'><p>Flags to use</p>
+</div><span id='structfield.options'><code>options: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Document&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>Options for the aggregate</p>
 </div><span id='structfield.read_prefs'><code>read_prefs: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../mongo_driver/read_prefs/struct.ReadPrefs.html' title='mongo_driver::read_prefs::ReadPrefs'>ReadPrefs</a>&gt;</code></span>
                            <span class='stab '></span><div class='docblock'><p>Read prefs to use</p>
-</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../mongo_driver/collection/struct.CountOptions.html' title='mongo_driver::collection::CountOptions'>CountOptions</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-296' class='srclink' href='../../src/mongo_driver/src/collection.rs.html#137-148' title='goto source code'>[src]</a></span></h3>
-<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../mongo_driver/collection/struct.CountOptions.html' title='mongo_driver::collection::CountOptions'>CountOptions</a></code></h4>
-<div class='docblock'><p>Default options used if none are provided.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../mongo_driver/collection/struct.AggregateOptions.html' title='mongo_driver::collection::AggregateOptions'>AggregateOptions</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-266' class='srclink' href='../../src/mongo_driver/src/collection.rs.html#54-64' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../mongo_driver/collection/struct.AggregateOptions.html' title='mongo_driver::collection::AggregateOptions'>AggregateOptions</a></code></h4>
+<div class='docblock'><p>Default options that are used if no options are specified
+when aggregating.</p>
 </div></div></section>
     <section id='search' class="content hidden"></section>
 

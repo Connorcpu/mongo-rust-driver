@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,33 +44,29 @@
 
     <section id='main' class="content mod">
 <h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>mongo_driver</a>::<wbr><a class='mod' href=''>write_concern</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-1014' class='srclink' href='../../src/mongo_driver/write_concern.rs.html#1-55' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-945' class='srclink' href='../../src/mongo_driver/src/write_concern.rs.html#1-55' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>Abstraction on top of the MongoDB connection write concern.</p>
 </div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.WriteConcern.html'
-                               title='mongo_driver::write_concern::WriteConcern'>WriteConcern</a></td>
-                        <td class='docblock short'>
-                             <p>This tells the driver what level of acknowledgment to await from the server.
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.WriteConcern.html'
+                                  title='mongo_driver::write_concern::WriteConcern'>WriteConcern</a></td>
+                           <td class='docblock short'>
+                                <p>This tells the driver what level of acknowledgment to await from the server.
 The default, <code>Default</code>, is right for the great majority of applications.</p>
-
-                        </td>
-                    </tr>
-                </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='enum' href='enum.WriteConcernLevel.html'
-                               title='mongo_driver::write_concern::WriteConcernLevel'>WriteConcernLevel</a></td>
-                        <td class='docblock short'>
-                             <p>Possible write concern levels, only default is supported at the moment.</p>
-
-                        </td>
-                    </tr>
-                </table></section>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.WriteConcernLevel.html'
+                                  title='mongo_driver::write_concern::WriteConcernLevel'>WriteConcernLevel</a></td>
+                           <td class='docblock short'>
+                                <p>Possible write concern levels, only default is supported at the moment.</p>
+                           </td>
+                       </tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -92,6 +89,8 @@ The default, <code>Default</code>, is right for the great majority of applicatio
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -112,7 +111,7 @@ The default, <code>Default</code>, is right for the great majority of applicatio
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

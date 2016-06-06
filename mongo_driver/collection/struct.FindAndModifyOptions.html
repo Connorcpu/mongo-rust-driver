@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,23 +44,23 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>mongo_driver</a>::<wbr><a href='index.html'>collection</a>::<wbr><a class='struct' href=''>FindAndModifyOptions</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-267' class='srclink' href='../../src/mongo_driver/collection.rs.html#64-71' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-273' class='srclink' href='../../src/mongo_driver/src/collection.rs.html#86-93' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct FindAndModifyOptions {
     pub sort: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Document&gt;,
     pub new: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
     pub fields: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Document&gt;,
 }</pre><div class='docblock'><p>Options to configure a find and modify operation.</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.sort'><code>sort</code></td><td><div class='docblock'><p>Sort order for the query</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.new'><code>new</code></td><td><div class='docblock'><p>If the new version of the document should be returned</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.fields'><code>fields</code></td><td><div class='docblock'><p>The fields to return</p>
-</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../mongo_driver/collection/struct.FindAndModifyOptions.html' title='mongo_driver::collection::FindAndModifyOptions'>FindAndModifyOptions</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../mongo_driver/collection/struct.FindAndModifyOptions.html' title='mongo_driver::collection::FindAndModifyOptions'>FindAndModifyOptions</a></code></h4>
+</div><h2 class='fields'>Fields</h2><span id='structfield.sort'><code>sort: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Document&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>Sort order for the query</p>
+</div><span id='structfield.new'><code>new: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p>If the new version of the document should be returned</p>
+</div><span id='structfield.fields'><code>fields: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Document&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>The fields to return</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../mongo_driver/collection/struct.FindAndModifyOptions.html' title='mongo_driver::collection::FindAndModifyOptions'>FindAndModifyOptions</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-277' class='srclink' href='../../src/mongo_driver/src/collection.rs.html#95-111' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../mongo_driver/collection/struct.FindAndModifyOptions.html' title='mongo_driver::collection::FindAndModifyOptions'>FindAndModifyOptions</a></code></h4>
 <div class='docblock'><p>Default options used if none are provided.</p>
 </div></div></section>
     <section id='search' class="content hidden"></section>
@@ -84,6 +85,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -104,7 +107,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

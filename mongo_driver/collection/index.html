@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,106 +44,93 @@
 
     <section id='main' class="content mod">
 <h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>mongo_driver</a>::<wbr><a class='mod' href=''>collection</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-228' class='srclink' href='../../src/mongo_driver/collection.rs.html#1-848' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-228' class='srclink' href='../../src/mongo_driver/src/collection.rs.html#1-910' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>Access to a MongoDB collection.</p>
 
 <p><code>Collection</code> is the main type used when accessing collections.</p>
 </div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.BulkOperation.html'
-                               title='mongo_driver::collection::BulkOperation'>BulkOperation</a></td>
-                        <td class='docblock short'>
-                             <p>Provides an abstraction for submitting multiple write operations as a single batch.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.BulkOperationOptions.html'
-                               title='mongo_driver::collection::BulkOperationOptions'>BulkOperationOptions</a></td>
-                        <td class='docblock short'>
-                             <p>Options to configure a bulk operation.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.Collection.html'
-                               title='mongo_driver::collection::Collection'>Collection</a></td>
-                        <td class='docblock short'>
-                             <p>Provides access to a collection for most CRUD operations, I.e. insert, update, delete, find, etc.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.CountOptions.html'
-                               title='mongo_driver::collection::CountOptions'>CountOptions</a></td>
-                        <td class='docblock short'>
-                             <p>Options to configure a count operation.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.FindAndModifyOptions.html'
-                               title='mongo_driver::collection::FindAndModifyOptions'>FindAndModifyOptions</a></td>
-                        <td class='docblock short'>
-                             <p>Options to configure a find and modify operation.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.InsertOptions.html'
-                               title='mongo_driver::collection::InsertOptions'>InsertOptions</a></td>
-                        <td class='docblock short'>
-                             <p>Options to configure an insert operation.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.RemoveOptions.html'
-                               title='mongo_driver::collection::RemoveOptions'>RemoveOptions</a></td>
-                        <td class='docblock short'>
-                             <p>Options to configure a remove operation.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.TailOptions.html'
-                               title='mongo_driver::collection::TailOptions'>TailOptions</a></td>
-                        <td class='docblock short'>
-                             <p>Options to configure a tailing query.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.UpdateOptions.html'
-                               title='mongo_driver::collection::UpdateOptions'>UpdateOptions</a></td>
-                        <td class='docblock short'>
-                             <p>Options to configure an update operation.</p>
-
-                        </td>
-                    </tr>
-                </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AggregateOptions.html'
+                                  title='mongo_driver::collection::AggregateOptions'>AggregateOptions</a></td>
+                           <td class='docblock short'>
+                                <p>Options to configure an aggregate operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.BulkOperation.html'
+                                  title='mongo_driver::collection::BulkOperation'>BulkOperation</a></td>
+                           <td class='docblock short'>
+                                <p>Provides an abstraction for submitting multiple write operations as a single batch.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.BulkOperationOptions.html'
+                                  title='mongo_driver::collection::BulkOperationOptions'>BulkOperationOptions</a></td>
+                           <td class='docblock short'>
+                                <p>Options to configure a bulk operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Collection.html'
+                                  title='mongo_driver::collection::Collection'>Collection</a></td>
+                           <td class='docblock short'>
+                                <p>Provides access to a collection for most CRUD operations, I.e. insert, update, delete, find, etc.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CountOptions.html'
+                                  title='mongo_driver::collection::CountOptions'>CountOptions</a></td>
+                           <td class='docblock short'>
+                                <p>Options to configure a count operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.FindAndModifyOptions.html'
+                                  title='mongo_driver::collection::FindAndModifyOptions'>FindAndModifyOptions</a></td>
+                           <td class='docblock short'>
+                                <p>Options to configure a find and modify operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.InsertOptions.html'
+                                  title='mongo_driver::collection::InsertOptions'>InsertOptions</a></td>
+                           <td class='docblock short'>
+                                <p>Options to configure an insert operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.RemoveOptions.html'
+                                  title='mongo_driver::collection::RemoveOptions'>RemoveOptions</a></td>
+                           <td class='docblock short'>
+                                <p>Options to configure a remove operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TailOptions.html'
+                                  title='mongo_driver::collection::TailOptions'>TailOptions</a></td>
+                           <td class='docblock short'>
+                                <p>Options to configure a tailing query.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.UpdateOptions.html'
+                                  title='mongo_driver::collection::UpdateOptions'>UpdateOptions</a></td>
+                           <td class='docblock short'>
+                                <p>Options to configure an update operation.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='enum' href='enum.FindAndModifyOperation.html'
-                               title='mongo_driver::collection::FindAndModifyOperation'>FindAndModifyOperation</a></td>
-                        <td class='docblock short'>
-                             <p>Possible find and modify operations.</p>
-
-                        </td>
-                    </tr>
-                </table></section>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.FindAndModifyOperation.html'
+                                  title='mongo_driver::collection::FindAndModifyOperation'>FindAndModifyOperation</a></td>
+                           <td class='docblock short'>
+                                <p>Possible find and modify operations.</p>
+                           </td>
+                       </tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -165,6 +153,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -185,7 +175,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

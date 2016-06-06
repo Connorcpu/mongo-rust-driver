@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,10 +44,10 @@
 
     <section id='main' class="content enum">
 <h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>mongo_driver</a>::<wbr><a href='index.html'>read_prefs</a>::<wbr><a class='enum' href=''>ReadMode</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-987' class='srclink' href='../../src/mongo_driver/read_prefs.rs.html#6-17' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-918' class='srclink' href='../../src/mongo_driver/src/read_prefs.rs.html#6-17' title='goto source code'>[src]</a></span></h1>
 <pre class='rust enum'>pub enum ReadMode {
     Primary,
     Secondary,
@@ -55,12 +56,12 @@
     Nearest,
 }</pre><div class='docblock'><p>Describes how reads should be dispatched.</p>
 </div><h2 class='variants'>Variants</h2>
-<table><tr><td id='variant.Primary'><code>Primary</code></td><td><div class='docblock'><p>Default mode. All operations read from the current replica set primary.</p>
-</div></td></tr><tr><td id='variant.Secondary'><code>Secondary</code></td><td><div class='docblock'><p>All operations read from among the nearest secondary members of the replica set.</p>
-</div></td></tr><tr><td id='variant.PrimaryPreferred'><code>PrimaryPreferred</code></td><td><div class='docblock'><p>In most situations, operations read from the primary but if it is unavailable, operations read from secondary members.</p>
-</div></td></tr><tr><td id='variant.SecondaryPreferred'><code>SecondaryPreferred</code></td><td><div class='docblock'><p>In most situations, operations read from among the nearest secondary members, but if no secondaries are available, operations read from the primary.</p>
-</div></td></tr><tr><td id='variant.Nearest'><code>Nearest</code></td><td><div class='docblock'><p>Operations read from among the nearest members of the replica set, irrespective of the member’s type.</p>
-</div></td></tr></table></section>
+<span id='variant.Primary' class='variant'><code>Primary</code></span><div class='docblock'><p>Default mode. All operations read from the current replica set primary.</p>
+</div><span id='variant.Secondary' class='variant'><code>Secondary</code></span><div class='docblock'><p>All operations read from among the nearest secondary members of the replica set.</p>
+</div><span id='variant.PrimaryPreferred' class='variant'><code>PrimaryPreferred</code></span><div class='docblock'><p>In most situations, operations read from the primary but if it is unavailable, operations read from secondary members.</p>
+</div><span id='variant.SecondaryPreferred' class='variant'><code>SecondaryPreferred</code></span><div class='docblock'><p>In most situations, operations read from among the nearest secondary members, but if no secondaries are available, operations read from the primary.</p>
+</div><span id='variant.Nearest' class='variant'><code>Nearest</code></span><div class='docblock'><p>Operations read from among the nearest members of the replica set, irrespective of the member’s type.</p>
+</div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -83,6 +84,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -103,7 +106,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

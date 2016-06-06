@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,10 +44,10 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>mongo_driver</a>::<wbr><a href='index.html'>client</a>::<wbr><a class='struct' href=''>Client</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-129' class='srclink' href='../../src/mongo_driver/client.rs.html#232-235' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-129' class='srclink' href='../../src/mongo_driver/src/client.rs.html#232-235' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct Client&lt;'a&gt; {
     // some fields omitted
 }</pre><div class='docblock'><p>Client that provides access to a MongoDB MongoDB node, replica-set, or sharded-cluster.</p>
@@ -54,20 +55,23 @@
 <p>It maintains management of underlying sockets and routing to individual nodes based on
 <code>ReadPrefs</code> or <code>WriteConcern</code>. Clients cannot be shared between threads, pop a new one from
 a <code>ClientPool</code> in every thread that needs a connection instead.</p>
-</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl&lt;'a&gt; <a class='struct' href='../../mongo_driver/client/struct.Client.html' title='mongo_driver::client::Client'>Client</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.get_collection' class='method'><code>fn <a href='#method.get_collection' class='fnname'>get_collection</a>&lt;DBT: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;, CT: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;&gt;(&amp;'a self, db: DBT, collection: CT) -&gt; <a class='struct' href='../../mongo_driver/collection/struct.Collection.html' title='mongo_driver::collection::Collection'>Collection</a>&lt;'a&gt;</code></h4>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='struct' href='../../mongo_driver/client/struct.Client.html' title='mongo_driver::client::Client'>Client</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-133' class='srclink' href='../../src/mongo_driver/src/client.rs.html#237-316' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.get_collection' class='method'><code>fn <a href='#method.get_collection' class='fnname'>get_collection</a>&lt;DBT:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;,&nbsp;CT:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;&gt;(&amp;'a self, db: DBT, collection: CT) -&gt; <a class='struct' href='../../mongo_driver/collection/struct.Collection.html' title='mongo_driver::collection::Collection'>Collection</a>&lt;'a&gt;</code></h4>
 <div class='docblock'><p>Borrow a collection</p>
-</div><h4 id='method.take_collection' class='method'><code>fn <a href='#method.take_collection' class='fnname'>take_collection</a>&lt;DBT: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;, CT: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;&gt;(self, db: DBT, collection: CT) -&gt; <a class='struct' href='../../mongo_driver/collection/struct.Collection.html' title='mongo_driver::collection::Collection'>Collection</a>&lt;'a&gt;</code></h4>
+</div><h4 id='method.take_collection' class='method'><code>fn <a href='#method.take_collection' class='fnname'>take_collection</a>&lt;DBT:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;,&nbsp;CT:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;&gt;(self, db: DBT, collection: CT) -&gt; <a class='struct' href='../../mongo_driver/collection/struct.Collection.html' title='mongo_driver::collection::Collection'>Collection</a>&lt;'a&gt;</code></h4>
 <div class='docblock'><p>Take a collection, client is owned by the collection so the collection can easily
 be passed around</p>
-</div><h4 id='method.get_database' class='method'><code>fn <a href='#method.get_database' class='fnname'>get_database</a>&lt;S: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;&gt;(&amp;'a self, db: S) -&gt; <a class='struct' href='../../mongo_driver/database/struct.Database.html' title='mongo_driver::database::Database'>Database</a>&lt;'a&gt;</code></h4>
+</div><h4 id='method.get_database' class='method'><code>fn <a href='#method.get_database' class='fnname'>get_database</a>&lt;S:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;&gt;(&amp;'a self, db: S) -&gt; <a class='struct' href='../../mongo_driver/database/struct.Database.html' title='mongo_driver::database::Database'>Database</a>&lt;'a&gt;</code></h4>
 <div class='docblock'><p>Borrow a database</p>
-</div><h4 id='method.take_database' class='method'><code>fn <a href='#method.take_database' class='fnname'>take_database</a>&lt;S: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;&gt;(self, db: S) -&gt; <a class='struct' href='../../mongo_driver/database/struct.Database.html' title='mongo_driver::database::Database'>Database</a>&lt;'a&gt;</code></h4>
+</div><h4 id='method.take_database' class='method'><code>fn <a href='#method.take_database' class='fnname'>take_database</a>&lt;S:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;&gt;(self, db: S) -&gt; <a class='struct' href='../../mongo_driver/database/struct.Database.html' title='mongo_driver::database::Database'>Database</a>&lt;'a&gt;</code></h4>
 <div class='docblock'><p>Take a database, client is owned by the database so the database can easily
 be passed around</p>
 </div><h4 id='method.get_server_status' class='method'><code>fn <a href='#method.get_server_status' class='fnname'>get_server_status</a>(&amp;self, read_prefs: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../mongo_driver/read_prefs/struct.ReadPrefs.html' title='mongo_driver::read_prefs::ReadPrefs'>ReadPrefs</a>&gt;) -&gt; <a class='type' href='../../mongo_driver/type.Result.html' title='mongo_driver::Result'>Result</a>&lt;Document&gt;</code></h4>
 <div class='docblock'><p>Queries the server for the current server status, returns a document with this information.</p>
-</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../mongo_driver/client/struct.Client.html' title='mongo_driver::client::Client'>Client</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.drop' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#method.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
-</div></section>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../mongo_driver/client/struct.Client.html' title='mongo_driver::client::Client'>Client</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-184' class='srclink' href='../../src/mongo_driver/src/client.rs.html#318-325' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.drop' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>A method called when the value goes out of scope. <a href="https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -90,6 +94,8 @@ be passed around</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -110,7 +116,7 @@ be passed around</p>
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

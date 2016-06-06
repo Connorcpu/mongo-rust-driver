@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,20 +44,20 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>mongo_driver</a>::<wbr><a href='index.html'>collection</a>::<wbr><a class='struct' href=''>InsertOptions</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-292' class='srclink' href='../../src/mongo_driver/collection.rs.html#129-134' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-298' class='srclink' href='../../src/mongo_driver/src/collection.rs.html#151-156' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct InsertOptions {
     pub insert_flags: <a class='struct' href='../../mongo_driver/flags/struct.Flags.html' title='mongo_driver::flags::Flags'>Flags</a>&lt;<a class='enum' href='../../mongo_driver/flags/enum.InsertFlag.html' title='mongo_driver::flags::InsertFlag'>InsertFlag</a>&gt;,
     pub write_concern: <a class='struct' href='../../mongo_driver/write_concern/struct.WriteConcern.html' title='mongo_driver::write_concern::WriteConcern'>WriteConcern</a>,
 }</pre><div class='docblock'><p>Options to configure an insert operation.</p>
-</div><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                                  <td id='structfield.insert_flags'><code>insert_flags</code></td><td><div class='docblock'><p>Flags to use</p>
-</div></td></tr><tr class='stab '>
-                                  <td id='structfield.write_concern'><code>write_concern</code></td><td><div class='docblock'><p>Write concern to use</p>
-</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../mongo_driver/collection/struct.InsertOptions.html' title='mongo_driver::collection::InsertOptions'>InsertOptions</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../mongo_driver/collection/struct.InsertOptions.html' title='mongo_driver::collection::InsertOptions'>InsertOptions</a></code></h4>
+</div><h2 class='fields'>Fields</h2><span id='structfield.insert_flags'><code>insert_flags: <a class='struct' href='../../mongo_driver/flags/struct.Flags.html' title='mongo_driver::flags::Flags'>Flags</a>&lt;<a class='enum' href='../../mongo_driver/flags/enum.InsertFlag.html' title='mongo_driver::flags::InsertFlag'>InsertFlag</a>&gt;</code></span>
+                           <span class='stab '></span><div class='docblock'><p>Flags to use</p>
+</div><span id='structfield.write_concern'><code>write_concern: <a class='struct' href='../../mongo_driver/write_concern/struct.WriteConcern.html' title='mongo_driver::write_concern::WriteConcern'>WriteConcern</a></code></span>
+                           <span class='stab '></span><div class='docblock'><p>Write concern to use</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../mongo_driver/collection/struct.InsertOptions.html' title='mongo_driver::collection::InsertOptions'>InsertOptions</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-301' class='srclink' href='../../src/mongo_driver/src/collection.rs.html#158-166' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../mongo_driver/collection/struct.InsertOptions.html' title='mongo_driver::collection::InsertOptions'>InsertOptions</a></code></h4>
 <div class='docblock'><p>Default options used if none are provided.</p>
 </div></div></section>
     <section id='search' class="content hidden"></section>
@@ -81,6 +82,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -101,7 +104,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

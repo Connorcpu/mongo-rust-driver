@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -43,10 +44,10 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>mongo_driver</a>::<wbr><a href='index.html'>client</a>::<wbr><a class='struct' href=''>ClientPool</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-33' class='srclink' href='../../src/mongo_driver/client.rs.html#35-41' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-33' class='srclink' href='../../src/mongo_driver/src/client.rs.html#35-41' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct ClientPool {
     // some fields omitted
 }</pre><div class='docblock'><p>Pool that allows usage of clients out of a single pool from multiple threads.</p>
@@ -57,7 +58,8 @@ back to the pool when it goes out of scope.</p>
 <p>This client pool cannot be cloned, but it can be use from different threads by using an <code>Arc</code>.
 Clients cannot be shared between threads, pop a client from the pool for very single thread
 where you need a connection.</p>
-</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../mongo_driver/client/struct.ClientPool.html' title='mongo_driver::client::ClientPool'>ClientPool</a></code></h3><div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(uri: <a class='struct' href='../../mongo_driver/client/struct.Uri.html' title='mongo_driver::client::Uri'>Uri</a>, ssl_options: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../mongo_driver/client/struct.SslOptions.html' title='mongo_driver::client::SslOptions'>SslOptions</a>&gt;) -&gt; <a class='struct' href='../../mongo_driver/client/struct.ClientPool.html' title='mongo_driver::client::ClientPool'>ClientPool</a></code></h4>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../mongo_driver/client/struct.ClientPool.html' title='mongo_driver::client::ClientPool'>ClientPool</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-37' class='srclink' href='../../src/mongo_driver/src/client.rs.html#43-96' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(uri: <a class='struct' href='../../mongo_driver/client/struct.Uri.html' title='mongo_driver::client::Uri'>Uri</a>, ssl_options: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../mongo_driver/client/struct.SslOptions.html' title='mongo_driver::client::SslOptions'>SslOptions</a>&gt;) -&gt; <a class='struct' href='../../mongo_driver/client/struct.ClientPool.html' title='mongo_driver::client::ClientPool'>ClientPool</a></code></h4>
 <div class='docblock'><p>Create a new ClientPool with that can provide clients pointing to the specified uri.
 The pool will connect via SSL if you add <code>?ssl=true</code> to the uri. You can optionally pass
 in SSL options to configure SSL certificate usage and so on.</p>
@@ -65,9 +67,15 @@ in SSL options to configure SSL certificate usage and so on.</p>
 <div class='docblock'><p>Get a reference to this pool&#39;s Uri.</p>
 </div><h4 id='method.pop' class='method'><code>fn <a href='#method.pop' class='fnname'>pop</a>(&amp;self) -&gt; <a class='struct' href='../../mongo_driver/client/struct.Client.html' title='mongo_driver::client::Client'>Client</a></code></h4>
 <div class='docblock'><p>Retrieve a client from the client pool, possibly blocking until one is available.</p>
-</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a> for <a class='struct' href='../../mongo_driver/client/struct.ClientPool.html' title='mongo_driver::client::ClientPool'>ClientPool</a></code></h3><div class='impl-items'></div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a> for <a class='struct' href='../../mongo_driver/client/struct.ClientPool.html' title='mongo_driver::client::ClientPool'>ClientPool</a></code></h3><div class='impl-items'></div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../mongo_driver/client/struct.ClientPool.html' title='mongo_driver::client::ClientPool'>ClientPool</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../mongo_driver/client/struct.ClientPool.html' title='mongo_driver::client::ClientPool'>ClientPool</a></code></h3><div class='impl-items'><h4 id='method.drop' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#method.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
-</div></section>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a> for <a class='struct' href='../../mongo_driver/client/struct.ClientPool.html' title='mongo_driver::client::ClientPool'>ClientPool</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-57' class='srclink' href='../../src/mongo_driver/src/client.rs.html#98' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a> for <a class='struct' href='../../mongo_driver/client/struct.ClientPool.html' title='mongo_driver::client::ClientPool'>ClientPool</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-58' class='srclink' href='../../src/mongo_driver/src/client.rs.html#99' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../mongo_driver/client/struct.ClientPool.html' title='mongo_driver::client::ClientPool'>ClientPool</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-59' class='srclink' href='../../src/mongo_driver/src/client.rs.html#101-105' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../mongo_driver/client/struct.ClientPool.html' title='mongo_driver::client::ClientPool'>ClientPool</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-65' class='srclink' href='../../src/mongo_driver/src/client.rs.html#107-114' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.drop' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>A method called when the value goes out of scope. <a href="https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -90,6 +98,8 @@ in SSL options to configure SSL certificate usage and so on.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
@@ -110,7 +120,7 @@ in SSL options to configure SSL certificate usage and so on.</p>
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
