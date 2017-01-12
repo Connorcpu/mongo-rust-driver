@@ -13,6 +13,11 @@ pub struct Bsonc {
     inner: *mut bindings::bson_t
 }
 
+#[cfg(windows)]
+type BufferLen = u32;
+#[cfg(not(windows))]
+type BufferLen = u64;
+
 impl Bsonc {
     pub fn new() -> Bsonc {
         Bsonc::from_ptr(unsafe { bindings::bson_new() })
@@ -30,7 +35,7 @@ impl Bsonc {
         let inner = unsafe {
             bindings::bson_new_from_data(
                 buffer[..].as_ptr(),
-                buffer.len() as u32
+                buffer.len() as BufferLen
             )
         };
 
